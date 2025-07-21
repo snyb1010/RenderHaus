@@ -1,0 +1,401 @@
+html, body {
+  height: auto;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+}
+
+/* Fade down animation */
+.fade-down {
+  animation: fadeDown 0.6s ease-out forwards;
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Glass effect base */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+/* Glass card variant */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Glass nav effect with animation */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  animation: navFadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes navFadeIn {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateY(-10px);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+  }
+}
+
+/* Nav links underline on hover */
+nav#navbar ul li a:hover,
+nav#navbar ul li a.active {
+  position: relative;
+  color: #0076e8; /* or your primary color */
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+.fade-delay-4 { animation-delay: 0.8s; }
+.fade-delay-5 { animation-delay: 1s; }
+
+@media (max-width: 640px) {
+  .timeline-line {
+    left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+
+/* Desktop animation */
+@keyframes marquee-left-desktop {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(-60%); }
+}
+
+@media (min-width: 641px) {
+  .marquee-track {
+    animation: marquee-left-desktop 10s linear infinite;
+  }
+}
+
+@keyframes marquee-left-mobile {
+  0% { transform: translateX(55%); }
+  100% { transform: translateX(-170%); }
+}
+
+@media (max-width: 640px) {
+  .marquee-track {
+    animation-name: marquee-left-mobile;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+
+  @keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(60px) rotate(-3deg); }
+      100% { opacity: 1; transform: translateX(0) rotate(-1deg); }
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+
+    .animate-slide-in {
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+
+
+    @keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Delay helpers */
+.delay-0 { animation-delay: 0s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+
+
+     /* Hidden by default, shifted left */
+  .feature-item,
+  #custom-quote {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  /* Animate slide in */
+  .feature-item.animate-slide-in-left,
+  #custom-quote.animate-fade-in-up {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Fade up for price section */
+  #price-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  #price-section.animate-fade-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-up-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+  }
+
+  .fade-up-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+    @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-up-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+  }
+
+  .fade-up-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
+
+
+
+
+
+
+
+      /* Button style */
+    .tag-btn {
+      position: relative;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .tag-btn.active {
+      background-color: rgba(255 255 255 / 0.8);
+      color: #0F0F1C;
+    }
+    /* Counter bubble - initially hidden */
+    .tag-btn .count {
+      position: absolute;
+      top: -6px;
+      right: -2px;
+      background: #0076e8;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      padding: 0 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      user-select: none;
+    }
+    /* Show counter on hover */
+    .tag-btn:hover .count {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #next-video-btn,
+    #prev-video-btn {
+      transition: background-color 0.3s ease;
+      user-select: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #0076e8;
+      color: white;
+      border-radius: 9999px;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 20;
+      border: none;
+    }
+    #next-video-btn:hover,
+    #prev-video-btn:hover {
+      background-color: #1c8bf3;
+    }
+
+    #next-video-btn {
+      right: 0.5rem;
+    }
+    #prev-video-btn {
+      left: 0.5rem;
+    }
+
+
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
+
+
+
+.border-red-500 {
+  border-color: #ef4444; /* Tailwind red-500 */
+}
